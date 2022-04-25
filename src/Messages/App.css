@@ -1,0 +1,636 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+:root {
+  --sidePanel-color: #0f0f13;
+  --message-color: #222429;
+  --main-color: #222429;
+  --metaPanel-color: #0f0f13;
+  --hover-color: rgb(24, 45, 109);
+  --message-form-color: #555b66;
+}
+
+.authLogo {
+  width: 45% !important;
+}
+.authLogo3 {
+  max-height: 6% !important;
+  text-align: center;
+  margin: auto;
+  position: absolute !important;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+}
+
+html,
+body,
+.app {
+  height: 100vh;
+  background-color: var(--main-color) !important;
+  width: 100vw;
+  display: flex;
+  padding: 0px !important;
+  margin: 0px !important;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.app {
+  overflow: hidden !important;
+}
+
+.allModal {
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+
+.userList:hover {
+  background-color: var(--hover-color) !important;
+}
+
+.messageColumn {
+  background-color: var(--message-color) !important;
+  margin-left: 310px;
+}
+
+.blueColorTemporary {
+  color: white !important;
+  background-color: transparent !important;
+  font-size: 1.2em !important;
+  border-radius: 2px !important;
+}
+.blueColorTemporary:hover {
+  color: var(--hover-color) !important;
+  background-color: transparent !important;
+}
+
+.discussionAddBtn {
+  font-size: 0.9em !important;
+}
+
+.buttonBlueColorTemporary {
+  color: white !important;
+  background-color: var(--hover-color) !important;
+  border-radius: 2px !important;
+}
+
+.buttonBlueColorTemporary:hover {
+  background-color: white !important;
+  color: var(--hover-color) !important;
+  border-radius: 2px !important;
+}
+
+/* UserPanel.js */
+.userPanel {
+  padding-bottom: 2em;
+  font-size: large;
+  background-color: var(--sidePanel-color) !important;
+  color: white;
+  visibility: hidden;
+}
+
+/* SidePanel.js */
+.menu {
+  padding-top: 0.7vh;
+  padding-bottom: 2em;
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--sidePanel-color) !important;
+}
+
+.menuItems {
+  overflow-y: scroll;
+}
+.menuFriends:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffff !important;
+}
+
+/* friendsMenu.js */
+
+.friendsMenu {
+  background: var(--main-color) !important;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.friendsButton {
+  background-color: transparent !important;
+  color: white !important;
+  margin-right: 10px !important;
+}
+.friendsButton:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffff !important;
+}
+.friendsButtonActive {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffff !important;
+  margin-right: 10px !important;
+}
+.backBtnFriendsMenu {
+  background-color: transparent !important;
+  color: white !important;
+  margin: 0 !important;
+}
+/* metaPanel.js */
+
+.metaHeader {
+  background-color: var(--metaPanel-color) !important;
+  color: white !important;
+  border: 0px transparent !important;
+}
+.metaCrossBtn {
+  position: relative !important;
+}
+.metaHeaderSecondary {
+  font-size: 1.8rem !important;
+}
+.metaPanel {
+  height: 100% !important;
+  width: 25vw;
+  overflow: hidden;
+  background-color: var(--metaPanel-color) !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  padding: 10px !important;
+  padding-top: 0px !important;
+  padding-right: 20px !important;
+}
+
+.editBtn {
+  position: relative !important;
+}
+
+.discussionName {
+  font-size: 0.9em !important;
+}
+
+.emoji-mart {
+  color: black !important;
+  background-color: white !important;
+}
+
+.emojipicker {
+  color: black !important;
+  background-color: white !important;
+}
+
+.discussionName:hover {
+  color: white !important;
+  cursor: pointer !important;
+  background-color: #35343a !important;
+}
+
+.removeBtn {
+  color: rgb(212, 95, 95) !important;
+  background-color: transparent !important;
+  font-size: 1.1em !important;
+}
+.removeBtn:hover {
+  color: rgb(218, 24, 24) !important;
+}
+
+.metaPanel div {
+  background-color: var(--metaPanel-color) !important;
+  color: white !important;
+}
+.metaPanel {
+  overflow-y: scroll;
+}
+
+.headerTertiary {
+  color: white !important;
+  font-size: 1.2rem !important;
+}
+
+a:hover {
+  color: var(--hover-color) !important;
+}
+
+/* Messages.js */
+.backBtnMessage {
+  visibility: hidden;
+}
+
+.messageAuthor {
+  font-size: 1.15em !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: hidden;
+  max-width: 100vw !important;
+  z-index: 999 !important;
+  background-color: var(--message-color);
+  color: white !important;
+}
+.searchBox {
+  width: 15vw;
+}
+.messages_group {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--message-color);
+  color: white !important;
+}
+.messageComponent {
+  background-color: var(--message-color) !important;
+  color: white !important;
+  z-index: 999 !important;
+}
+
+.messageComment div {
+  color: white !important;
+}
+
+.messagesHeader {
+  background-color: var(--message-color) !important;
+  color: white !important;
+}
+.messages {
+  overflow-y: scroll;
+}
+
+/* MessageForm.js */
+.message__form {
+  z-index: 999;
+  position: absolute !important;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  left: 0;
+  right: 0;
+  bottom: 20px !important;
+}
+
+.messageComponent input {
+  background-color: var(--message-form-color) !important;
+  color: white !important;
+  border-radius: 2px !important;
+  font-size: 1.2em !important;
+}
+
+.messageText {
+  font-size: 1.2em !important;
+}
+
+input {
+  background-color: var(--message-form-color) !important;
+  color: white !important;
+  border-radius: 2px !important;
+}
+
+.messageComponent input::placeholder {
+  color: rgba(255, 255, 255, 0.534) !important;
+}
+
+.auth_form input::placeholder {
+  color: rgba(255, 255, 255, 0.534) !important;
+}
+
+.auth_form input {
+  background-color: var(--message-form-color) !important;
+  color: rgba(255, 255, 255, 0.555) !important;
+}
+
+/* Message.js */
+.message__self {
+  border-left: 2px solid var(--hover-color);
+  padding-left: 8px;
+  color: white !important;
+}
+
+.message__image {
+  padding: 1em;
+  width: 25vw;
+}
+.userImage {
+  border-radius: 25% !important;
+  overflow: hidden;
+}
+
+/* ProgressBar.js */
+.progress__bar {
+  margin: 0.3em 0 0 0 !important;
+}
+
+.color__square {
+  width: 35px;
+  height: 35px;
+}
+
+.color__overlay {
+  width: 85px;
+  height: 35px;
+  transform: rotate(225deg);
+}
+
+/* Typing.js */
+.user__typing {
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+.typing {
+  width: 5em;
+  height: 2em;
+  position: relative;
+  padding: 10px;
+  margin-left: 5px;
+  background: #e6e6e6;
+  border-radius: 2px;
+}
+
+.typing__dot {
+  float: left;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background: #8d8c91;
+  border-radius: 5%;
+  opacity: 0;
+  animation: loadingFade 1s infinite;
+}
+
+.typing__dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing__dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing__dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loadingFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Skeleton.js */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.skeleton::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  animation: sweep 2s infinite;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.skeleton__avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 3px;
+  background-color: rgba(58, 57, 57, 0.3);
+}
+
+.skeleton__author {
+  background-color: rgba(58, 57, 57, 0.3);
+  width: 120px;
+  height: 10px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  right: 0;
+}
+
+.skeleton__details {
+  background-color: rgba(58, 57, 57, 0.3);
+  height: 20px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 5px;
+  left: 40px;
+  right: 20px;
+}
+.menuItems::-webkit-scrollbar {
+  display: none;
+}
+.metaPanel::-webkit-scrollbar {
+  display: none;
+}
+.messages::-webkit-scrollbar {
+  display: none;
+}
+/* 
+@media only screen and (min-height: 1366px) {
+  .messages_group {
+    height: 92vh;
+  }
+}
+@media only screen and (max-height: 1164px) {
+  .messages_group {
+    height: 90vh;
+  }
+}
+
+@media only screen and (max-height: 1046px) {
+  .messages_group {
+    height: 89vh;
+  }
+}
+
+@media only screen and (max-height: 930px) {
+  .messages_group {
+    height: 88vh;
+  }
+}
+
+@media only screen and (max-height: 830px) {
+  .messages_group {
+    height: 86vh;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .messages_group {
+    height: 83.5vh;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .messages_group {
+    height: 81vh;
+  }
+}
+
+@media only screen and (max-height: 560px) {
+  .messages_group {
+    height: 78vh;
+  }
+}
+
+@media only screen and (max-height: 470px) {
+  .messages_group {
+    height: 75vh;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .messages_group {
+    height: 52vh;
+  }
+}
+
+@media only screen and (max-height: 350px) {
+  .messages_group {
+    height: 47vh;
+  }
+}
+
+@media only screen and (max-height: 310px) {
+  .messages_group {
+    height: 42vh;
+  }
+}
+
+@media only screen and (max-height: 280px) {
+  .messages_group {
+    height: 37vh;
+  }
+}
+
+@media only screen and (max-height: 260px) {
+  .messages_group {
+    height: 32vh;
+  }
+}
+
+@media only screen and (max-height: 230px) {
+  .messages_group {
+    height: 27vh;
+  }
+}
+
+@media only screen and (max-height: 215px) {
+  .messages_group {
+    height: 22vh;
+  }
+}
+
+@media only screen and (max-height: 200px) {
+  .messages_group {
+    height: 17vh;
+  }
+}
+
+@media only screen and (max-height: 185px) {
+  .messages_group {
+    height: 12vh;
+  }
+} */
+@media only screen and (max-width: 1200px) {
+  .userPanel {
+    min-width: 100vw !important;
+  }
+  .backBtnMessage {
+    visibility: visible;
+    color: white !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin-right: 10px !important;
+    padding-top: 6px !important;
+  }
+  .menu {
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+    padding-right: 2vw;
+    font-size: 1.4em;
+  }
+
+  .messageColumn {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0vh;
+    margin-left: 0;
+    min-width: 100vw;
+  }
+  .searchBox {
+    width: 32vw;
+    font-size: 0.6rem;
+  }
+  .message__form {
+    font-size: 1.1rem;
+  }
+  .menuItems::-webkit-scrollbar {
+    display: none;
+  }
+  .metaPanel::-webkit-scrollbar {
+    display: none;
+  }
+  .messages::-webkit-scrollbar {
+    display: none;
+  }
+  html,
+  body,
+  .app {
+    font-size: 70% !important;
+    overflow: hidden;
+  }
+  .metaPanel {
+    position: absolute !important;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    min-width: 100vw;
+    background-color: white;
+    min-height: 100vh !important;
+    padding: 10px !important;
+  }
+  .message__image {
+    width: 70vw;
+  }
+  .messagesAuthor {
+    font-size: 1.5em !important;
+  }
+}
